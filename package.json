@@ -40,6 +40,7 @@
     "karma-webpack": "^1.7.0",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.1.0",
+    "react-dom": "^15.1.0",
     "rimraf": "^2.5.2",
     "webpack": "^1.13.1"
   },

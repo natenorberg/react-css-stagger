@@ -43,7 +43,9 @@ export default class Stagger extends React.Component {
     return (
       <div className={this.props.className}>
         { this.state.animationDone
-            ? this.props.children
+          ? this.props.children.map((child, index) =>
+            React.cloneElement(child, { key: index })
+          )
             : this.props.children.map((child, index) => {
 
               const transitionClassName = index >= this.state.childrenAdded.length
