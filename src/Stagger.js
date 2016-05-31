@@ -54,7 +54,9 @@ export default class Stagger extends React.Component {
                 ? [child.props.className, transitionClassName].join(' ')
                 : transitionClassName;
 
-              return React.cloneElement(child, { className });
+              const key = index;
+
+              return React.cloneElement(child, { className, key });
             })
         }
       </div>
