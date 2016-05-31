@@ -1,0 +1,27 @@
+{
+  "name": "react-css-stagger",
+  "version": "0.0.1",
+  "description": "A component that adds CSS transitions to create a staggered animation on entrance",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && webpack",
+    "clean": "rimraf ./dist",
+    "test": "npm test"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "transitions",
+    "stagger",
+    "staggered",
+    "animation",
+    "ngAnimate",
+    "centricient"
+  ],
+  "author": "natenorberg",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^2.5.2",
+    "webpack": "^1.13.1"
+  }
+}
