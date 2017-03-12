@@ -6,7 +6,11 @@
   "scripts": {
     "build": "npm run clean && webpack",
     "clean": "rimraf ./dist",
-    "test": "karma start --singleRun=true && eslint ./src"
+    "test": "jest --env=jsdom"
+  },
+  "jest": {
+    "testRegex": "Spec\\.js$",
+    "rootDir": "src"
   },
   "keywords": [
     "react",
@@ -32,6 +36,7 @@
     "eslint": "1.10.3",
     "eslint-plugin-react": "3.16.1",
     "jasmine": "^2.4.1",
+    "jest": "^19.0.2",
     "karma": "^0.13.22",
     "karma-es5-shim": "0.0.4",
     "karma-jasmine": "^1.0.2",
