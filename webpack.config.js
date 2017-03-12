@@ -5,7 +5,6 @@ var path = require('path');
 
 module.exports = {
   entry: './src',
-  devtool: 'source-map',
   output: {
     path: __dirname + '/dist/',
     filename: 'index.js',
@@ -22,6 +21,10 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
+  },
+  externals: {
+    'react': 'react',
+    'react-dom': 'react-dom',
   },
   resolve: {
     modulesDirectories: ['src', 'node_modules'],
