@@ -1,6 +1,6 @@
 {
   "name": "react-css-stagger",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A component that adds CSS transitions to create a staggered animation on entrance",
   "main": "dist/index.js",
   "scripts": {
