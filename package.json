@@ -20,7 +20,8 @@
     "staggered",
     "animation",
     "ngAnimate",
-    "centricient"
+    "centricient",
+    "quiq"
   ],
   "author": "natenorberg",
   "repository": "https://github.com/natenorberg/react-css-stagger",
