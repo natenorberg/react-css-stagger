@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-  delay: React.PropTypes.number.isRequired,
-  initialDelay: React.PropTypes.number,
-  transition: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string,
+  delay: PropTypes.number.isRequired,
+  initialDelay: PropTypes.number,
+  transition: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 const defaultProps = {
