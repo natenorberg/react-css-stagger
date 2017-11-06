@@ -14,10 +14,10 @@ describe('Stagger component', () => {
       delay: 100,
       initialDelay: 10,
       className: 'testContainer',
-      children
+      children,
     };
 
-    wrapper = mount(<Stagger {...testProps}/>);
+    wrapper = mount(<Stagger {...testProps} />);
   });
 
   describe('initial state', () => {
@@ -76,15 +76,33 @@ describe('Stagger component', () => {
 
     describe('when none of the children have been added', () => {
       it('adds the enter class to all the children', () => {
-        expect(wrapper.children().every('.zoom-enter')).toBe(true);
+        expect(
+          wrapper
+            .find('div.testContainer')
+            .children()
+            .every('.zoom-enter'),
+        ).toBe(true);
       });
     });
 
     describe('when one of the children has been added', () => {
       it('adds the enter and active classes', () => {
         wrapper.instance().addItem();
-        expect(wrapper.children().at(0).prop('className')).toBe('zoom-enter zoom-enter-active');
-        expect(wrapper.children().at(1).prop('className')).toBe('zoom-enter');
+        wrapper.update();
+        expect(
+          wrapper
+            .find('div.testContainer')
+            .children()
+            .at(0)
+            .prop('className'),
+        ).toBe('zoom-enter zoom-enter-active');
+        expect(
+          wrapper
+            .find('div.testContainer')
+            .children()
+            .at(1)
+            .prop('className'),
+        ).toBe('zoom-enter');
       });
     });
   });
