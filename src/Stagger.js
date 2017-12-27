@@ -26,7 +26,7 @@ export default class Stagger extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.timeout);
+    clearTimeout(this.timeout);
   }
 
   addItem() {
