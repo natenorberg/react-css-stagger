@@ -25,6 +25,10 @@ export default class Stagger extends React.Component {
     this.timeout = setTimeout(this.addItem, this.props.initialDelay);
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
+
   addItem() {
     if (this.itemsAdded < this.props.children.length) {
       this.setState({
